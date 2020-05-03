@@ -77,12 +77,13 @@ public class Develop extends AppCompatActivity implements View.OnClickListener {
             develop.put("Develop Title " , TxtTitle);
             develop.put("Develop Description " , TxtDes);
             documentReference.set(develop).addOnSuccessListener(new OnSuccessListener<Void>() {
-                @Override
-                public void onSuccess(Void aVoid) {
-             ///       Log.d(TAG , "Developer info saved." + develop);
-                }
-            })
+                                                                    @Override
+                                                                    public void onSuccess(Void aVoid) {
+                                                                        ///       Log.d(TAG , "Developer info saved." + develop);
+                                                                    }
+                                                                });
 
+                    //////////
             Toast.makeText(getApplicationContext(), "Thank You For Helping!", Toast.LENGTH_SHORT).show();
             Intent intentLogin = new Intent(this, HomeScreen.class);
             startActivity(intentLogin);
